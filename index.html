@@ -3,18 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Ahmet Çetin Hair Studio | İzmir Üçyol</title>
-
-    <meta name="description" content="Ahmet Çetin Hair Studio – İzmir Üçyol'da profesyonel saç tasarımı, renklendirme, kesim ve bakım hizmetleri.">
-
+    <title>Ahmet Çetin Hair Studio | İzmir Üçyol Lüks Saç Tasarım & Kuaför</title>
+    <meta name="description" content="İzmir Üçyol'un prestijli saç tasarım stüdyosu. Ahmet Çetin Hair Studio ile kişiye özel renklendirme, ombre, balyaj, modern saç kesimi ve profesyonel gelin saçı hizmetleri.">
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+    
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-
     <script>
         tailwind.config = {
             theme: {
@@ -30,1548 +28,910 @@
                             600: '#A4803B',
                             700: '#7D602A',
                             800: '#56421B',
-                            900: '#30240E'
+                            900: '#30240E',
                         },
-
                         charcoal: {
                             950: '#0B0C0E',
                             900: '#111216',
                             850: '#17191E',
                             800: '#1E2128',
-                            700: '#2C303B'
-                        }
+                            700: '#2C303B',
+                            600: '#3D4251',
+                        },
+                        cream: '#FDFBF7',
+                        sand: '#F3EFE6'
                     },
-
                     fontFamily: {
                         serif: ['"Cormorant Garamond"', 'serif'],
-                        sans: ['"Plus Jakarta Sans"', 'sans-serif']
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
                     },
-
                     backgroundImage: {
-                        'gold-gradient':
-                            'linear-gradient(135deg, #E6CA65 0%, #C5A059 50%, #9E7D3B 100%)'
+                        'gold-gradient': 'linear-gradient(135deg, #E6CA65 0%, #C5A059 50%, #9E7D3B 100%)',
+                        'gold-shimmer': 'linear-gradient(90deg, #D4AF37 0%, #FFF3B0 50%, #D4AF37 100%)',
+                        'dark-gradient': 'linear-gradient(180deg, rgba(17,18,22,0.95) 0%, rgba(11,12,14,0.98) 100%)',
                     }
                 }
             }
         }
     </script>
 
+    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
-
-        html {
-            scroll-behavior: smooth;
+        .gold-border-glow {
+            border: 1px solid rgba(197, 160, 89, 0.25);
+            box-shadow: 0 0 25px -5px rgba(197, 160, 89, 0.15);
         }
-
-        body {
-            overflow-x: hidden;
+        .gold-border-glow:hover {
+            border-color: rgba(212, 175, 55, 0.6);
+            box-shadow: 0 0 30px 0 rgba(197, 160, 89, 0.25);
         }
-
-        .gold-border {
-            border: 1px solid rgba(197,160,89,.25);
-            box-shadow: 0 0 25px -5px rgba(197,160,89,.12);
-        }
-
-        .gold-border:hover {
-            border-color: rgba(212,175,55,.55);
-            box-shadow: 0 0 30px rgba(197,160,89,.18);
-        }
-
-        .gold-text {
-            background: linear-gradient(
-                135deg,
-                #F5EDD7 0%,
-                #D4AF37 50%,
-                #C5A059 100%
-            );
-
+        .text-gold-gradient {
+            background: linear-gradient(135deg, #F5EDD7 0%, #D4AF37 50%, #C5A059 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-
-        .glass {
-            background: rgba(17,18,22,.78);
-            backdrop-filter: blur(18px);
-            -webkit-backdrop-filter: blur(18px);
+        .backdrop-glass {
+            background: rgba(17, 18, 22, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
         }
-
-        .noise {
-            background-image:
-                radial-gradient(
-                    rgba(197,160,89,.045) 1px,
-                    transparent 0
-                );
-
+        .noise-bg {
+            background-image: radial-gradient(rgba(197, 160, 89, 0.05) 1px, transparent 0);
             background-size: 24px 24px;
         }
-
-        .hero-image {
-            animation: heroFloat 7s ease-in-out infinite;
-        }
-
-        @keyframes heroFloat {
-            0%,100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-8px);
-            }
-        }
-
-        .review-card {
-            transition: transform .3s ease, border-color .3s ease;
-        }
-
-        .review-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .mobile-menu-open {
-            display: block !important;
-        }
-
     </style>
 </head>
+<body class="bg-charcoal-950 text-slate-200 font-sans selection:bg-gold-500 selection:text-charcoal-950 overflow-x-hidden antialiased">
 
-
-<body class="bg-charcoal-950 text-slate-200 font-sans antialiased">
-
-
-<!-- ========================================================= -->
-<!-- HEADER -->
-<!-- ========================================================= -->
-
-<header
-    id="main-header"
-    class="fixed top-0 left-0 w-full z-50 glass border-b border-white/5 transition-all duration-300">
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-        <div class="h-20 flex items-center justify-between">
-
-            <!-- LOGO -->
-
-            <a href="#" class="flex flex-col">
-
-                <span class="font-serif text-2xl sm:text-3xl tracking-[.22em] font-bold gold-text">
+    <!-- STICKY TOP HEADER -->
+    <header class="fixed top-0 left-0 w-full z-50 backdrop-glass border-b border-white/5 transition-all duration-300" id="main-header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="group flex flex-col items-start">
+                <span class="font-serif text-2xl sm:text-3xl tracking-[0.25em] text-gold-gradient font-bold uppercase transition-all duration-300 group-hover:brightness-110">
                     AHMET ÇETİN
                 </span>
-
-                <span class="text-[9px] sm:text-[10px] tracking-[.35em] text-slate-400 uppercase">
-                    Hair Studio • İzmir Üçyol
+                <span class="text-[9px] sm:text-[10px] tracking-[0.4em] text-slate-400 uppercase font-medium -mt-1 pl-0.5">
+                    HAIR STUDIO • İZMİR ÜÇYOL
                 </span>
-
             </a>
 
-
-            <!-- DESKTOP MENU -->
-
-            <nav class="hidden md:flex items-center gap-8 text-xs uppercase tracking-wider">
-
-                <a href="#hakkimizda"
-                   class="hover:text-gold-400 transition">
-                    Hakkımızda
-                </a>
-
-                <a href="#hizmetler"
-                   class="hover:text-gold-400 transition">
-                    Hizmetler
-                </a>
-
-                <a href="#galeri"
-                   class="hover:text-gold-400 transition">
-                    Galeri
-                </a>
-
-                <a href="#yorumlar"
-                   class="hover:text-gold-400 transition">
-                    Google Yorumları
-                </a>
-
-                <a href="#iletisim"
-                   class="hover:text-gold-400 transition">
-                    İletişim
-                </a>
-
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wider uppercase text-slate-300">
+                <a href="#hakkimizda" class="hover:text-gold-400 transition-colors">Hakkımızda</a>
+                <a href="#hizmetler" class="hover:text-gold-400 transition-colors">Hizmetler</a>
+                <a href="#galeri" class="hover:text-gold-400 transition-colors">Galeri</a>
+                <a href="#yorumlar" class="hover:text-gold-400 transition-colors">Yorumlar</a>
+                <a href="#iletisim" class="hover:text-gold-400 transition-colors">İletişim</a>
             </nav>
 
-
-            <!-- DESKTOP ACTION -->
-
-            <div class="hidden sm:flex items-center gap-3">
-
-                <a
-                    href="tel:05416413558"
-                    class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:text-gold-400 hover:border-gold-500/40 transition">
-
+            <!-- Actions -->
+            <div class="hidden sm:flex items-center space-x-4">
+                <a href="tel:05416413558" class="p-2.5 rounded-full border border-white/10 text-slate-300 hover:text-gold-400 hover:border-gold-500/40 transition-all">
                     <i data-lucide="phone" class="w-4 h-4"></i>
-
                 </a>
-
-
-                <a
-                    href="https://wa.me/905416413558?text=Merhaba,%20Ahmet%20%C3%87etin%20Hair%20Studio%20i%C3%A7in%20randevu%20almak%20istiyorum."
-                    target="_blank"
-                    class="px-5 py-3 rounded-full bg-gold-gradient text-charcoal-950 font-bold text-xs uppercase tracking-wider flex items-center gap-2 hover:brightness-110 transition">
-
-                    <i data-lucide="message-circle" class="w-4 h-4"></i>
-
-                    Randevu Al
-
-                </a>
-
-            </div>
-
-
-            <!-- MOBILE -->
-
-            <button
-                id="mobile-toggle"
-                class="md:hidden p-2 text-slate-300">
-
-                <i data-lucide="menu" class="w-6 h-6"></i>
-
-            </button>
-
-        </div>
-
-
-        <!-- MOBILE MENU -->
-
-        <div
-            id="mobile-menu"
-            class="hidden md:hidden border-t border-white/10 py-6 space-y-4">
-
-            <a href="#hakkimizda" class="block mobile-link">
-                Hakkımızda
-            </a>
-
-            <a href="#hizmetler" class="block mobile-link">
-                Hizmetler
-            </a>
-
-            <a href="#galeri" class="block mobile-link">
-                Galeri
-            </a>
-
-            <a href="#yorumlar" class="block mobile-link">
-                Google Yorumları
-            </a>
-
-            <a href="#iletisim" class="block mobile-link">
-                İletişim
-            </a>
-
-            <div class="pt-4 border-t border-white/10 space-y-3">
-
-                <a
-                    href="tel:05416413558"
-                    class="block text-center py-3 border border-white/10 rounded-xl">
-
-                    0541 641 35 58
-
-                </a>
-
-                <a
-                    href="https://wa.me/905416413558?text=Merhaba,%20Ahmet%20%C3%87etin%20Hair%20Studio%20i%C3%A7in%20randevu%20almak%20istiyorum."
-                    target="_blank"
-                    class="block text-center py-3 rounded-xl bg-gold-gradient text-charcoal-950 font-bold">
-
-                    WhatsApp Randevu
-
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</header>
-
-
-
-<!-- ========================================================= -->
-<!-- HERO -->
-<!-- ========================================================= -->
-
-<section
-    class="relative min-h-screen flex items-center pt-28 pb-16 noise overflow-hidden">
-
-    <div class="absolute w-[500px] h-[500px] bg-gold-500/10 blur-[140px] rounded-full left-1/2 top-1/3 -translate-x-1/2 pointer-events-none">
-    </div>
-
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-
-        <div class="grid lg:grid-cols-12 gap-12 items-center">
-
-
-            <!-- TEXT -->
-
-            <div class="lg:col-span-7 text-center lg:text-left">
-
-                <div
-                    class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold-500/10 border border-gold-500/30 mb-6">
-
-                    <i data-lucide="map-pin"
-                       class="w-4 h-4 text-gold-400">
-                    </i>
-
-                    <span class="text-xs uppercase tracking-widest text-gold-300">
-                        İzmir Üçyol
+                <a href="https://wa.me/905416413558?text=Merhaba,%20Ahmet%20%C3%87etin%20Hair%20Studio%20i%C3%A7in%20randevu%20almak%20istiyorum." 
+                   target="_blank"
+                   class="relative group overflow-hidden rounded-full p-[1px] focus:outline-none">
+                    <span class="absolute inset-0 bg-gold-gradient rounded-full"></span>
+                    <span class="relative px-5 py-2.5 rounded-full bg-charcoal-900 text-gold-300 group-hover:bg-opacity-0 group-hover:text-charcoal-950 transition-all duration-300 flex items-center gap-2 text-xs font-semibold tracking-wider uppercase">
+                        <i data-lucide="calendar" class="w-4 h-4"></i>
+                        Randevu Al
                     </span>
+                </a>
+            </div>
 
+            <!-- Mobile Menu Button -->
+            <button id="mobile-toggle" class="md:hidden p-2 text-slate-300 hover:text-gold-400 focus:outline-none" aria-label="Menüyü Aç">
+                <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-white/10 bg-charcoal-900/98 px-6 py-6 space-y-4">
+            <a href="#hakkimizda" class="block text-base font-medium text-slate-200 hover:text-gold-400 mobile-link">Hakkımızda</a>
+            <a href="#hizmetler" class="block text-base font-medium text-slate-200 hover:text-gold-400 mobile-link">Hizmetlerimiz</a>
+            <a href="#galeri" class="block text-base font-medium text-slate-200 hover:text-gold-400 mobile-link">Çalışma Galerisi</a>
+            <a href="#yorumlar" class="block text-base font-medium text-slate-200 hover:text-gold-400 mobile-link">Müşteri Yorumları</a>
+            <a href="#iletisim" class="block text-base font-medium text-slate-200 hover:text-gold-400 mobile-link">İletişim & Konum</a>
+            <div class="pt-4 border-t border-white/10 flex flex-col gap-3">
+                <a href="tel:05416413558" class="w-full py-3 text-center rounded-xl border border-white/10 text-slate-200 flex items-center justify-center gap-2">
+                    <i data-lucide="phone" class="w-4 h-4 text-gold-400"></i>
+                    0541 641 35 58
+                </a>
+                <a href="https://wa.me/905416413558?text=Merhaba,%20Ahmet%20%C3%87etin%20Hair%20Studio%20i%C3%A7in%20randevu%20almak%20istiyorum." target="_blank" class="w-full py-3 text-center rounded-xl bg-gold-gradient text-charcoal-950 font-bold flex items-center justify-center gap-2 shadow-lg shadow-gold-500/20">
+                    <i data-lucide="message-circle" class="w-5 h-5"></i>
+                    WhatsApp Randevu
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative min-h-[92vh] flex items-center justify-center pt-24 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden noise-bg">
+        <!-- Ambient Lighting Glows -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] sm:w-[700px] h-[500px] bg-gold-500/10 blur-[130px] rounded-full pointer-events-none"></div>
+        <div class="absolute -bottom-20 -right-20 w-80 h-80 bg-gold-600/10 blur-[100px] rounded-full pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+            <!-- Hero Text Content -->
+            <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+                <!-- Location & Distinction Pill -->
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold-500/10 border border-gold-500/30 backdrop-blur-md">
+                    <i data-lucide="map-pin" class="w-3.5 h-3.5 text-gold-400"></i>
+                    <span class="text-xs font-semibold tracking-widest text-gold-300 uppercase">İzmir Üçyol • Premium Saç Tasarımı</span>
                 </div>
 
-
-                <h1
-                    class="font-serif text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05]">
-
-                    Saçlarınızda
-
-                    <br>
-
-                    <span class="italic gold-text font-normal">
-                        Sanat.
-                    </span>
-
-                    <br>
-
-                    Ahmet Çetin
-                    Dokunuşu.
-
+                <h1 class="font-serif text-4xl sm:text-6xl xl:text-7xl font-bold tracking-tight text-slate-100 leading-[1.12]">
+                    Saçlarınızda Sanat,<br>
+                    <span class="italic font-normal text-gold-gradient">Ahmet Çetin</span> Dokunuşu.
                 </h1>
 
-
-                <p
-                    class="mt-7 text-slate-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-
-                    Kişiye özel saç tasarımı, profesyonel renklendirme,
-                    modern kesim ve bakım uygulamalarıyla
-                    tarzınızı yeniden keşfedin.
-
+                <p class="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed">
+                    Kişiye özel renk analizleri, trend kesim teknikleri ve lüks bakım ritüelleri ile tarzınızı sanata dönüştürüyoruz. Üçyol’un kalbinde, kendinizi özel hissedeceğiniz ayrıcalıklı bir kuaför deneyimi.
                 </p>
 
-
-                <div
-                    class="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-
-                    <a
-                        href="https://wa.me/905416413558?text=Merhaba,%20sa%C3%A7%20tasar%C4%B1m%C4%B1%20ve%20randevu%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
-                        target="_blank"
-                        class="px-8 py-4 rounded-full bg-gold-gradient text-charcoal-950 font-bold text-sm uppercase tracking-wider flex justify-center items-center gap-3">
-
-                        <i data-lucide="message-circle"
-                           class="w-5 h-5">
-                        </i>
-
-                        WhatsApp Randevu
-
+                <!-- CTA Actions -->
+                <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                    <a href="https://wa.me/905416413558?text=Merhaba%20Ahmet%20Bey,%20sa%C3%A7%20tasar%C4%B1m%C4%B1%20ve%20randevu%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." 
+                       target="_blank"
+                       class="w-full sm:w-auto px-8 py-4 rounded-full bg-gold-gradient text-charcoal-950 font-bold text-sm tracking-widest uppercase hover:brightness-110 hover:shadow-lg hover:shadow-gold-500/25 transition-all flex items-center justify-center gap-3">
+                        <i data-lucide="message-circle" class="w-5 h-5"></i>
+                        Hızlı WhatsApp Randevu
                     </a>
-
-
-                    <a
-                        href="#hizmetler"
-                        class="px-8 py-4 rounded-full border border-white/15 bg-white/5 flex justify-center items-center gap-2 text-sm uppercase tracking-wider">
-
-                        Hizmetleri İncele
-
-                        <i data-lucide="arrow-down"
-                           class="w-4 h-4">
-                        </i>
-
+                    <a href="#hizmetler" 
+                       class="w-full sm:w-auto px-8 py-4 rounded-full border border-white/20 text-slate-200 hover:text-gold-300 hover:border-gold-500/50 bg-charcoal-900/50 backdrop-blur-md text-sm font-semibold tracking-wider uppercase transition-all flex items-center justify-center gap-2">
+                        <span>Hizmetleri İncele</span>
+                        <i data-lucide="arrow-down" class="w-4 h-4"></i>
                     </a>
-
                 </div>
 
-
-                <!-- TRUST -->
-
-                <div
-                    class="mt-10 pt-8 border-t border-white/10 grid grid-cols-3 max-w-xl mx-auto lg:mx-0">
-
-                    <div>
-
-                        <div class="font-serif text-3xl text-gold-300">
-                            10+
-                        </div>
-
-                        <div class="text-[10px] uppercase tracking-wider text-slate-400">
-                            Yıl Deneyim
-                        </div>
-
+                <!-- Quality Badges Grid -->
+                <div class="pt-8 grid grid-cols-3 gap-4 border-t border-white/10 max-w-lg mx-auto lg:mx-0">
+                    <div class="text-left">
+                        <div class="font-serif text-2xl sm:text-3xl font-bold text-gold-300">10+ Yıl</div>
+                        <div class="text-[11px] sm:text-xs text-slate-400 uppercase tracking-wider">Usta Deneyim</div>
                     </div>
-
-
-                    <div class="border-l border-white/10 pl-5">
-
-                        <div class="font-serif text-3xl text-gold-300 flex items-center gap-1">
-
-                            5.0
-
-                            <i data-lucide="star"
-                               class="w-4 h-4 fill-gold-400 text-gold-400">
-                            </i>
-
+                    <div class="text-left border-l border-white/10 pl-4">
+                        <div class="font-serif text-2xl sm:text-3xl font-bold text-gold-300 flex items-center gap-1">
+                            5.0 <i data-lucide="star" class="w-4 h-4 fill-gold-400 text-gold-400"></i>
                         </div>
-
-                        <div class="text-[10px] uppercase tracking-wider text-slate-400">
-                            Google Puanı
-                        </div>
-
+                        <div class="text-[11px] sm:text-xs text-slate-400 uppercase tracking-wider">Google Puanı</div>
                     </div>
-
-
-                    <div class="border-l border-white/10 pl-5">
-
-                        <div class="font-serif text-3xl text-gold-300">
-                            Üçyol
-                        </div>
-
-                        <div class="text-[10px] uppercase tracking-wider text-slate-400">
-                            İzmir
-                        </div>
-
+                    <div class="text-left border-l border-white/10 pl-4">
+                        <div class="font-serif text-2xl sm:text-3xl font-bold text-gold-300">%100</div>
+                        <div class="text-[11px] sm:text-xs text-slate-400 uppercase tracking-wider">Müşteri Memnuniyeti</div>
                     </div>
-
                 </div>
-
             </div>
 
-
-            <!-- HERO IMAGE -->
-
-            <div class="lg:col-span-5">
-
-                <div class="relative max-w-md mx-auto">
-
-                    <div class="absolute -inset-3 rounded-3xl bg-gold-500/20 blur-xl">
+            <!-- Hero Visual Composition -->
+            <div class="lg:col-span-5 relative">
+                <div class="relative mx-auto max-w-md lg:max-w-none">
+                    <!-- Decorative Golden Frame Border -->
+                    <div class="absolute -inset-3 rounded-2xl bg-gradient-to-tr from-gold-500/30 via-transparent to-gold-400/20 blur-sm"></div>
+                    
+                    <div class="relative rounded-2xl overflow-hidden gold-border-glow bg-charcoal-900">
+                        <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1000&q=80" 
+                             alt="Ahmet Çetin Hair Studio Lüks Salon Deneyimi" 
+                             class="w-full h-[460px] sm:h-[540px] object-cover object-center filter brightness-95 contrast-105 hover:scale-105 transition-transform duration-700 ease-out">
+                        
+                        <!-- Floating Review Tag -->
+                        <div class="absolute bottom-4 left-4 right-4 p-4 rounded-xl backdrop-glass border border-white/10 shadow-2xl flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-gold-gradient flex items-center justify-center text-charcoal-950 font-bold">
+                                    <i data-lucide="scissors" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs font-bold text-slate-100">Kişiselleştirilmiş Tasarım</div>
+                                    <div class="text-[11px] text-gold-400">Yüz tipinize en uygun modern tonlar</div>
+                                </div>
+                            </div>
+                            <span class="inline-flex items-center gap-1 text-xs text-slate-300 font-medium bg-white/5 px-2.5 py-1 rounded-md border border-white/5">
+                                <i data-lucide="sparkles" class="w-3.5 h-3.5 text-gold-400"></i> Premium
+                            </span>
+                        </div>
                     </div>
-
-                    <div
-                        class="relative rounded-3xl overflow-hidden gold-border bg-charcoal-900">
-
-                        <!-- KENDİ GÖRSELİN -->
-
-                        <img
-                            src="images/1.jpg"
-                            alt="Ahmet Çetin Hair Studio"
-                            class="w-full h-[500px] object-cover hero-image">
-
-                    </div>
-
                 </div>
-
             </div>
-
         </div>
+    </section>
 
-    </div>
+    <!-- HAKKIMIZDA (ABOUT) SECTION -->
+    <section id="hakkimizda" class="py-24 bg-charcoal-900/60 border-y border-white/5 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+                
+                <!-- Gallery Trio Visual -->
+                <div class="lg:col-span-6 grid grid-cols-2 gap-4 relative">
+                    <div class="space-y-4">
+                        <div class="rounded-2xl overflow-hidden gold-border-glow h-64">
+                            <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=600&q=80" alt="Saç Renklendirme ve Bakım" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="rounded-2xl overflow-hidden gold-border-glow h-44 bg-charcoal-800 p-6 flex flex-col justify-center text-center">
+                            <i data-lucide="award" class="w-8 h-8 text-gold-400 mx-auto mb-2"></i>
+                            <div class="font-serif text-2xl font-bold text-slate-100">Özel Tasarım</div>
+                            <p class="text-xs text-slate-400 mt-1">Her saç teline profesyonel dokunuş</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4 pt-8">
+                        <div class="rounded-2xl overflow-hidden gold-border-glow h-44 bg-charcoal-850 p-6 flex flex-col justify-center border-l-4 border-gold-500">
+                            <div class="text-3xl font-serif font-bold text-gold-300">İzmir Üçyol</div>
+                            <p class="text-xs text-slate-300 mt-1 font-medium">Ulaşımı kolay merkezi konum & konforlu stüdyo ortamı</p>
+                        </div>
+                        <div class="rounded-2xl overflow-hidden gold-border-glow h-64">
+                            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80" alt="Saç Tasarımı ve Şekillendirme" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                        </div>
+                    </div>
+                </div>
 
-</section>
+                <!-- Text Content -->
+                <div class="lg:col-span-6 space-y-6">
+                    <div class="inline-flex items-center gap-2 text-gold-400 text-xs font-bold tracking-[0.2em] uppercase">
+                        <span class="w-6 h-[1px] bg-gold-400"></span>
+                        Hakkımızda & Vizyonumuz
+                    </div>
+                    
+                    <h2 class="font-serif text-3xl sm:text-5xl font-bold text-slate-100 leading-tight">
+                        Güzelliğinizi Ortaya Çıkaran <br>
+                        <span class="italic text-gold-gradient">Usta Bir Bakış Açısı</span>
+                    </h2>
 
+                    <p class="text-slate-300 leading-relaxed text-base font-light">
+                        İzmir Üçyol'da yer alan <strong class="text-white font-medium">Ahmet Çetin Hair Studio</strong>, sıradan bir kuaför salonunun ötesinde, her kadının kendini özel, dinlenmiş ve büyüleyici hissedeceği bir güzellik mabedidir. 
+                    </p>
 
+                    <p class="text-slate-400 leading-relaxed text-sm">
+                        Yılların getirdiği ustalık ve dünya saç trendlerini yakından takip eden vizyonumuzla; saçın doğasına ve sağlığına zarar vermeden en iddialı sarıları, balyajları, mikro kaynak ve kişiye özel kesimleri hayata geçiriyoruz. Bizim için her danışanımız, üzerine özenle çalışılacak eşsiz bir sanat eseridir.
+                    </p>
 
-<!-- ========================================================= -->
-<!-- ABOUT -->
-<!-- ========================================================= -->
+                    <!-- Feature checkmarks -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-gold-500/10 text-gold-400 flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="check" class="w-4 h-4"></i>
+                            </div>
+                            <span class="text-sm text-slate-200">Premium Segment Ürünler</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-gold-500/10 text-gold-400 flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="check" class="w-4 h-4"></i>
+                            </div>
+                            <span class="text-sm text-slate-200">Birebir Özel Saç Analizi</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-gold-500/10 text-gold-400 flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="check" class="w-4 h-4"></i>
+                            </div>
+                            <span class="text-sm text-slate-200">Hijyenik & Ferah Atmosfer</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-gold-500/10 text-gold-400 flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="check" class="w-4 h-4"></i>
+                            </div>
+                            <span class="text-sm text-slate-200">Güler Yüzlü & Profesyonel İlgi</span>
+                        </div>
+                    </div>
 
-<section
-    id="hakkimizda"
-    class="py-24 bg-charcoal-900 border-y border-white/5">
+                    <div class="pt-4">
+                        <a href="https://www.instagram.com/hairstudio_ahmetcetin?igsi=ejZlZzFxdGo5cnRt" target="_blank" class="inline-flex items-center gap-2 text-gold-400 hover:text-gold-300 font-semibold text-sm group tracking-wider">
+                            <span>Instagram'da Günlük Çalışmalarımızı Görün</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            </div>
+        </div>
+    </section>
 
-        <div class="grid lg:grid-cols-2 gap-14 items-center">
+    <!-- HİZMETLERİMİZ (SERVICES) SECTION -->
+    <section id="hizmetler" class="py-24 relative noise-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <div class="inline-flex items-center gap-2 text-gold-400 text-xs font-bold tracking-[0.25em] uppercase">
+                    <span class="w-6 h-[1px] bg-gold-400"></span>
+                    Ayrıcalıklı Hizmetler
+                    <span class="w-6 h-[1px] bg-gold-400"></span>
+                </div>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold text-slate-100">
+                    Kişiye Özel Profesyonel Bakım & Tasarım
+                </h2>
+                <p class="text-slate-400 text-sm sm:text-base">
+                    Ahmet Çetin kalitesiyle saçlarınıza hak ettiği ışıltıyı, hacmi ve modern formu kazandırın.
+                </p>
+            </div>
 
+            <!-- Services Grid (4 Key Services) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Service 1 -->
+                <div class="group relative rounded-2xl bg-charcoal-900/90 p-7 gold-border-glow flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <div class="w-12 h-12 rounded-xl bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 group-hover:bg-gold-gradient group-hover:text-charcoal-950 transition-all duration-300">
+                                <i data-lucide="scissors" class="w-6 h-6"></i>
+                            </div>
+                            <span class="px-3 py-1 text-[11px] font-semibold tracking-wider text-gold-300 bg-gold-500/10 rounded-full border border-gold-500/20 uppercase">
+                                Trend Kesim
+                            </span>
+                        </div>
 
-            <!-- IMAGE COLLAGE -->
-
-            <div class="grid grid-cols-2 gap-4">
-
-                <div class="space-y-4">
-
-                    <img
-                        src="images/2.jpg"
-                        alt="Ahmet Çetin Hair Studio"
-                        class="w-full h-72 object-cover rounded-2xl gold-border">
-
-                    <div
-                        class="h-44 rounded-2xl bg-charcoal-800 gold-border flex flex-col items-center justify-center text-center p-5">
-
-                        <i data-lucide="award"
-                           class="w-8 h-8 text-gold-400 mb-3">
-                        </i>
-
-                        <h3 class="font-serif text-2xl">
-                            Özel Tasarım
+                        <h3 class="font-serif text-2xl font-bold text-slate-100 group-hover:text-gold-300 transition-colors">
+                            Modern Saç Kesimi & Şekillendirme
                         </h3>
 
-                        <p class="text-xs text-slate-400 mt-2">
-                            Saçınıza özel yaklaşım
+                        <p class="text-slate-400 text-xs leading-relaxed">
+                            Yüz hatlarınıza ve saç yapınıza en uygun form. Özel fön, dalgalı fön ve hacim veren modern tasarım teknikleri.
                         </p>
 
+                        <ul class="space-y-2 pt-2 border-t border-white/5 text-xs text-slate-300">
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-gold-400"></i> Yüz tipine göre stil analizi</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-gold-400"></i> Katlı & modern lob/bob kesim</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-gold-400"></i> Kalıcı ve hacimli fön</li>
+                        </ul>
                     </div>
 
+                    <div class="pt-6 mt-6 border-t border-white/10">
+                        <a href="https://wa.me/905416413558?text=Merhaba,%20Sa%C3%A7%20Kesimi%20ve%20%C5%9Eekillendirme%20i%C3%A7in%20randevu%20almak%20istiyorum." 
+                           target="_blank" 
+                           class="w-full py-2.5 rounded-xl border border-gold-500/30 text-gold-300 text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2 group-hover:bg-gold-gradient group-hover:text-charcoal-950 group-hover:border-transparent transition-all">
+                            Randevu Oluştur
+                            <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
                 </div>
 
+                <!-- Service 2 -->
+                <div class="group relative rounded-2xl bg-charcoal-900/90 p-7 gold-border-glow flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 border-gold-500/40">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <div class="w-12 h-12 rounded-xl bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 group-hover:bg-gold-gradient group-hover:text-charcoal-950 transition-all duration-300">
+                                <i data-lucide="palette" class="w-6 h-6"></i>
+                            </div>
+                            <span class="px-3 py-1 text-[11px] font-bold tracking-wider text-charcoal-950 bg-gold-gradient rounded-full uppercase">
+                                En Popüler
+                            </span>
+                        </div>
 
-                <div class="space-y-4 pt-8">
+                        <h3 class="font-serif text-2xl font-bold text-slate-100 group-hover:text-gold-300 transition-colors">
+                            Kişiye Özel Renklendirme
+                        </h3>
 
-                    <div
-                        class="h-44 rounded-2xl bg-charcoal-800 gold-border flex flex-col justify-center p-6">
-
-                        <span class="font-serif text-3xl text-gold-300">
-                            İzmir Üçyol
-                        </span>
-
-                        <p class="text-xs text-slate-400 mt-2">
-                            Merkezi konum ve rahat ulaşım
+                        <p class="text-slate-400 text-xs leading-relaxed">
+                            Ombre, Balyaj, Sombre, Brushlight ve Bebek Sarısı tonlarında saçı yıpratmayan lüks açma ve tonlama seansları.
                         </p>
 
+                        <ul class="space-y-2 pt-2 border-t border-white/5 text-xs text-slate-300">
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-gold-400"></i> Kusursuz geçişli Ombre & Balyaj</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-gold-400"></i> Doğal röfle & dip pigmentasyonu</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-gold-400"></i> Soğuk sarı & bej tonlamaları</li>
+                        </ul>
                     </div>
 
-
-                    <img
-                        src="images/3.jpg"
-                        alt="Saç tasarımı"
-                        class="w-full h-72 object-cover rounded-2xl gold-border">
-
-                </div>
-
-            </div>
-
-
-            <!-- TEXT -->
-
-            <div>
-
-                <div class="flex items-center gap-3 text-gold-400 text-xs uppercase tracking-widest font-bold">
-
-                    <span class="w-7 h-px bg-gold-400"></span>
-
-                    Hakkımızda
-
-                </div>
-
-
-                <h2
-                    class="font-serif text-4xl sm:text-5xl font-bold mt-4">
-
-                    Güzelliğinizi Ortaya Çıkaran
-
-                    <span class="italic gold-text">
-                        Usta Dokunuş
-                    </span>
-
-                </h2>
-
-
-                <p class="text-slate-300 leading-relaxed mt-6">
-
-                    Ahmet Çetin Hair Studio, İzmir Üçyol'da
-                    kişiye özel saç tasarımı ve profesyonel kuaförlük
-                    hizmetleri sunmaktadır.
-
-                </p>
-
-
-                <p class="text-slate-400 text-sm leading-relaxed mt-4">
-
-                    Her saç yapısının ve yüz tipinin farklı olduğuna
-                    inanıyoruz. Bu nedenle hazır kalıplar yerine,
-                    kişiye özel analiz ve tasarım yaklaşımıyla çalışıyoruz.
-
-                </p>
-
-
-                <div class="grid sm:grid-cols-2 gap-4 mt-8">
-
-                    <div class="flex items-center gap-3">
-
-                        <span class="w-8 h-8 rounded-full bg-gold-500/10 flex items-center justify-center">
-
-                            <i data-lucide="check"
-                               class="w-4 h-4 text-gold-400">
-                            </i>
-
-                        </span>
-
-                        <span class="text-sm">
-                            Kişiye özel analiz
-                        </span>
-
+                    <div class="pt-6 mt-6 border-t border-white/10">
+                        <a href="https://wa.me/905416413558?text=Merhaba,%20Ombre/Balyaj%20ve%20Renklendirme%20i%C3%A7in%20fiyat%20ve%20randevu%20almak%20istiyorum." 
+                           target="_blank" 
+                           class="w-full py-2.5 rounded-xl bg-gold-gradient text-charcoal-950 font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 hover:brightness-110 transition-all shadow-md shadow-gold-500/20">
+                            WhatsApp ile Danış
+                            <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                        </a>
                     </div>
-
-
-                    <div class="flex items-center gap-3">
-
-                        <span class="w-8 h-8 rounded-full bg-gold-500/10 flex items-center justify-center">
-
-                            <i data-lucide="check"
-                               class="w-4 h-4 text-gold-400">
-                            </i>
-
-                        </span>
-
-                        <span class="text-sm">
-                            Profesyonel ürünler
-                        </span>
-
-                    </div>
-
-
-                    <div class="flex items-center gap-3">
-
-                        <span class="w-8 h-8 rounded-full bg-gold-500/10 flex items-center justify-center">
-
-                            <i data-lucide="check"
-                               class="w-4 h-4 text-gold-400">
-                            </i>
-
-                        </span>
-
-                        <span class="text-sm">
-                            Hijyenik ortam
-                        </span>
-
-                    </div>
-
-
-                    <div class="flex items-center gap-3">
-
-                        <span class="w-8 h-8 rounded-full bg-gold-500/10 flex items-center justify-center">
-
-                            <i data-lucide="check"
-                               class="w-4 h-4 text-gold-400">
-                            </i>
-
-                        </span>
-
-                        <span class="text-sm">
-                            Profesyonel hizmet
-                        </span>
-
-                    </div>
-
                 </div>
 
-
-                <a
-                    href="https://www.instagram.com/hairstudio_ahmetcetin?igsi=ejZlZzFxdGo5cnRt"
-                    target="_blank"
-                    class="inline-flex items-center gap-2 text-gold-400 mt-8 text-sm font-semibold">
-
-                    Instagram'da çalışmalarımızı görün
-
-                    <i data-lucide="arrow-right"
-                       class="w-4 h-4">
-                    </i>
-
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- ========================================================= -->
-<!-- SERVICES -->
-<!-- ========================================================= -->
-
-<section
-    id="hizmetler"
-    class="py-24 noise">
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-        <div class="text-center max-w-3xl mx-auto mb-14">
-
-            <div class="text-gold-400 text-xs uppercase tracking-[.25em] font-bold">
-                Hizmetler
-            </div>
-
-            <h2
-                class="font-serif text-4xl sm:text-5xl font-bold mt-3">
-
-                Profesyonel Saç Tasarımı
-
-            </h2>
-
-            <p class="text-slate-400 text-sm mt-4">
-                İhtiyacınıza ve saç yapınıza uygun profesyonel uygulamalar.
-            </p>
-
-        </div>
-
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-
-
-            <!-- SERVICE -->
-
-            <div class="p-7 rounded-2xl bg-charcoal-900 gold-border flex flex-col">
-
-                <div class="w-12 h-12 rounded-xl bg-gold-500/10 flex items-center justify-center text-gold-400">
-
-                    <i data-lucide="scissors" class="w-6 h-6"></i>
-
-                </div>
-
-                <h3 class="font-serif text-2xl font-bold mt-5">
-                    Saç Kesimi
-                </h3>
-
-                <p class="text-slate-400 text-xs leading-relaxed mt-3">
-                    Yüz tipine ve saç yapısına uygun modern kesim ve şekillendirme.
-                </p>
-
-                <a
-                    href="https://wa.me/905416413558?text=Merhaba,%20sa%C3%A7%20kesimi%20i%C3%A7in%20randevu%20almak%20istiyorum."
-                    target="_blank"
-                    class="mt-auto pt-6 text-gold-400 text-xs uppercase tracking-wider font-bold">
-
-                    Randevu Al →
-
-                </a>
-
-            </div>
-
-
-            <div class="p-7 rounded-2xl bg-charcoal-900 gold-border flex flex-col">
-
-                <div class="w-12 h-12 rounded-xl bg-gold-500/10 flex items-center justify-center text-gold-400">
-
-                    <i data-lucide="palette" class="w-6 h-6"></i>
-
-                </div>
-
-                <h3 class="font-serif text-2xl font-bold mt-5">
-                    Renklendirme
-                </h3>
-
-                <p class="text-slate-400 text-xs leading-relaxed mt-3">
-                    Ombre, balyaj, sombre ve kişiye özel renk uygulamaları.
-                </p>
-
-                <a
-                    href="https://wa.me/905416413558?text=Merhaba,%20renklendirme%20ve%20balyaj%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
-                    target="_blank"
-                    class="mt-auto pt-6 text-gold-400 text-xs uppercase tracking-wider font-bold">
-
-                    Bilgi Al →
-
-                </a>
-
-            </div>
-
-
-            <div class="p-7 rounded-2xl bg-charcoal-900 gold-border flex flex-col">
-
-                <div class="w-12 h-12 rounded-xl bg-gold-500/10 flex items-center justify-center text-gold-400">
-
-                    <i data-lucide="crown" class="w-6 h-6"></i>
-
-                </div>
-
-                <h3 class="font-serif text-2xl font-bold mt-5">
-                    Gelin & Nişan
-                </h3>
-
-                <p class="text-slate-400 text-xs leading-relaxed mt-3">
-                    Özel günler için gelin saçı, nişan ve davet saç tasarımları.
-                </p>
-
-                <a
-                    href="https://wa.me/905416413558?text=Merhaba,%20gelin%20ve%20ni%C5%9Fan%20sa%C3%A7%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
-                    target="_blank"
-                    class="mt-auto pt-6 text-gold-400 text-xs uppercase tracking-wider font-bold">
-
-                    Bilgi Al →
-
-                </a>
-
-            </div>
-
-
-            <div class="p-7 rounded-2xl bg-charcoal-900 gold-border flex flex-col">
-
-                <div class="w-12 h-12 rounded-xl bg-gold-500/10 flex items-center justify-center text-gold-400">
-
-                    <i data-lucide="sparkles" class="w-6 h-6"></i>
-
-                </div>
-
-                <h3 class="font-serif text-2xl font-bold mt-5">
-                    Saç Bakımı
-                </h3>
-
-                <p class="text-slate-400 text-xs leading-relaxed mt-3">
-                    Keratin, saç botoksu ve yoğun bakım uygulamaları.
-                </p>
-
-                <a
-                    href="https://wa.me/905416413558?text=Merhaba,%20sa%C3%A7%20bak%C4%B1m%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
-                    target="_blank"
-                    class="mt-auto pt-6 text-gold-400 text-xs uppercase tracking-wider font-bold">
-
-                    Bilgi Al →
-
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- ========================================================= -->
-<!-- GALLERY -->
-<!-- ========================================================= -->
-
-<section
-    id="galeri"
-    class="py-24 bg-charcoal-900 border-y border-white/5">
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
-
-            <div>
-
-                <div class="text-gold-400 text-xs uppercase tracking-[.25em] font-bold">
-                    Galeri
-                </div>
-
-                <h2 class="font-serif text-4xl sm:text-5xl font-bold mt-3">
-                    Çalışmalarımız
-                </h2>
-
-            </div>
-
-
-            <a
-                href="https://www.instagram.com/hairstudio_ahmetcetin?igsi=ejZlZzFxdGo5cnRt"
-                target="_blank"
-                class="px-5 py-3 rounded-full border border-white/10 text-gold-300 text-xs uppercase tracking-wider">
-
-                Instagram'a Git
-
-            </a>
-
-        </div>
-
-
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-
-
-            <img
-                src="images/4.jpg"
-                alt="Ahmet Çetin Hair Studio çalışması"
-                class="w-full h-72 object-cover rounded-2xl gold-border">
-
-
-            <img
-                src="images/5.jpg"
-                alt="Ahmet Çetin Hair Studio çalışması"
-                class="w-full h-72 object-cover rounded-2xl gold-border">
-
-
-            <img
-                src="images/6.jpg"
-                alt="Ahmet Çetin Hair Studio çalışması"
-                class="w-full h-72 object-cover rounded-2xl gold-border">
-
-
-            <img
-                src="images/7.jpg"
-                alt="Ahmet Çetin Hair Studio çalışması"
-                class="w-full h-72 object-cover rounded-2xl gold-border">
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- ========================================================= -->
-<!-- GOOGLE REVIEWS -->
-<!-- ========================================================= -->
-
-<section
-    id="yorumlar"
-    class="py-24 noise">
-
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-
-
-        <div class="text-center">
-
-            <div class="inline-flex items-center gap-2 text-gold-400 text-xs uppercase tracking-[.25em] font-bold">
-
-                <i data-lucide="star"
-                   class="w-4 h-4 fill-gold-400">
-                </i>
-
-                Google Yorumları
-
-            </div>
-
-
-            <h2 class="font-serif text-4xl sm:text-5xl font-bold mt-4">
-                Müşterilerimizin Google'daki Deneyimleri
-            </h2>
-
-
-            <p class="text-slate-400 text-sm max-w-2xl mx-auto mt-4">
-
-                Burada sahte veya manuel yazılmış yorum göstermiyoruz.
-                Güncel değerlendirmeleri doğrudan Google işletme profilinden
-                görebilirsiniz.
-
-            </p>
-
-        </div>
-
-
-        <!-- GOOGLE CARD -->
-
-        <div
-            class="mt-12 rounded-3xl bg-charcoal-900 gold-border p-8 sm:p-12 text-center relative overflow-hidden">
-
-
-            <div class="absolute -top-20 -right-20 w-60 h-60 bg-gold-500/10 blur-3xl rounded-full">
-            </div>
-
-
-            <div class="relative">
-
-
-                <!-- GOOGLE ICON -->
-
-                <div
-                    class="mx-auto w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-xl">
-
-                    <span class="text-3xl font-bold text-blue-500">
-                        G
-                    </span>
-
-                </div>
-
-
-                <h3 class="font-serif text-3xl font-bold mt-6">
-                    Google'da bizi inceleyin
-                </h3>
-
-
-                <div class="flex justify-center items-center gap-2 mt-4">
-
-                    <span class="text-3xl font-bold text-white">
-                        5.0
-                    </span>
-
-                    <div class="flex">
-
-                        <i data-lucide="star" class="w-5 h-5 fill-gold-400 text-gold-400"></i>
-                        <i data-lucide="star" class="w-5 h-5 fill-gold-400 text-gold-400"></i>
-                        <i data-lucide="star" class="w-5 h-5 fill-gold-400 text-gold-400"></i>
-                        <i data-lucide="star" class="w-5 h-5 fill-gold-400 text-gold-400"></i>
-                        <i data-lucide="star" class="w-5 h-5 fill-gold-400 text-gold-400"></i>
-
-                    </div>
-
-                </div>
-
-
-                <p class="text-slate-400 text-sm mt-4">
-                    Gerçek müşteri yorumlarını ve güncel puanı Google'da görüntüleyin.
-                </p>
-
-
-                <a
-                    href="https://maps.app.goo.gl/bWMnAVXDZvRxckW2A?g_st=ic"
-                    target="_blank"
-                    class="inline-flex items-center justify-center gap-3 mt-7 px-7 py-4 rounded-full bg-gold-gradient text-charcoal-950 font-bold text-sm uppercase tracking-wider hover:brightness-110 transition">
-
-                    <i data-lucide="external-link" class="w-5 h-5"></i>
-
-                    Google Yorumlarını Gör
-
-                </a>
-
-
-                <div class="mt-6 flex items-center justify-center gap-2 text-xs text-slate-500">
-
-                    <i data-lucide="shield-check"
-                       class="w-4 h-4">
-                    </i>
-
-                    Yorumlar Google işletme profilinden alınır.
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- ========================================================= -->
-<!-- CONTACT -->
-<!-- ========================================================= -->
-
-<section
-    id="iletisim"
-    class="py-24 bg-charcoal-900 border-t border-white/5">
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-        <div class="grid lg:grid-cols-2 gap-12">
-
-
-            <!-- CONTACT INFO -->
-
-            <div>
-
-                <div class="text-gold-400 text-xs uppercase tracking-[.25em] font-bold">
-                    İletişim
-                </div>
-
-
-                <h2 class="font-serif text-4xl sm:text-5xl font-bold mt-3">
-                    Randevunuzu Oluşturalım
-                </h2>
-
-
-                <p class="text-slate-400 text-sm mt-4 max-w-lg">
-                    Randevu ve hizmetler hakkında bilgi almak için
-                    WhatsApp üzerinden doğrudan iletişime geçebilirsiniz.
-                </p>
-
-
-                <div class="space-y-4 mt-8">
-
-
-                    <!-- ADDRESS -->
-
-                    <div class="p-5 rounded-2xl bg-charcoal-850 gold-border">
-
-                        <div class="flex gap-4">
-
-                            <div class="w-11 h-11 rounded-xl bg-gold-500/10 flex items-center justify-center text-gold-400">
-
-                                <i data-lucide="map-pin"></i>
-
+                <!-- Service 3 -->
+                <div class="group relative rounded-2xl bg-charcoal-900/90 p-7 gold-border-glow flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <div class="w-12 h-12 rounded-xl bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 group-hover:bg-gold-gradient group-hover:text-charcoal-950 transition-all duration-300">
+                                <i data-lucide="crown" class="w-6 h-6"></i>
                             </div>
+                            <span class="px-3 py-1 text-[11px] font-semibold tracking-wider text-gold-300 bg-gold-500/10 rounded-full border border-gold-500/20 uppercase">
+                                Özel Günler
+                            </span>
+                        </div>
 
+                        <h3 class="font-serif text-2xl font-bold text-slate-100 group-hover:text-gold-300 transition-colors">
+                            Gelin Başı & Nişan Tasarımı
+                        </h3>
 
-                            <div>
+                        <p class="text-slate-400 text-xs leading-relaxed">
+                            En özel gününüzde kusursuz görünmeniz için prova destekli gelin saçı, nişan topuzları ve zarif aksesuar uygulamaları.
+                        </p>
 
-                                <h4 class="font-bold">
-                                    Konum
-                                </h4>
+                        <ul class="space-y-2 pt-2 border-t border-white/5 text-xs text-slate-300">
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-gold-400"></i> Gelin saç tasarımı & provası</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-gold-400"></i> Nişan & Kına özel modelleri</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-gold-400"></i> Tüm gün kalıcı sabitleme</li>
+                        </ul>
+                    </div>
 
-                                <p class="text-xs text-slate-400 mt-1">
-                                    İzmir Üçyol
-                                </p>
+                    <div class="pt-6 mt-6 border-t border-white/10">
+                        <a href="https://wa.me/905416413558?text=Merhaba,%20Gelin%20Ba%C5%9F%C4%B1%20ve%20Ni%C5%9Fan%20sa%C3%A7%20tasar%C4%B1m%C4%B1%20paketleri%20hakk%C4%B1nda%20g%C3%B6r%C3%BC%C5%9Fmek%20istiyorum." 
+                           target="_blank" 
+                           class="w-full py-2.5 rounded-xl border border-gold-500/30 text-gold-300 text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2 group-hover:bg-gold-gradient group-hover:text-charcoal-950 group-hover:border-transparent transition-all">
+                            Gelin Paketi Al
+                            <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+                </div>
 
+                <!-- Service 4 -->
+                <div class="group relative rounded-2xl bg-charcoal-900/90 p-7 gold-border-glow flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <div class="w-12 h-12 rounded-xl bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 group-hover:bg-gold-gradient group-hover:text-charcoal-950 transition-all duration-300">
+                                <i data-lucide="sparkles" class="w-6 h-6"></i>
+                            </div>
+                            <span class="px-3 py-1 text-[11px] font-semibold tracking-wider text-gold-300 bg-gold-500/10 rounded-full border border-gold-500/20 uppercase">
+                                Yoğun Bakım
+                            </span>
+                        </div>
 
-                                <a
-                                    href="https://maps.app.goo.gl/bWMnAVXDZvRxckW2A?g_st=ic"
-                                    target="_blank"
-                                    class="inline-flex items-center gap-2 text-gold-400 text-xs font-bold mt-2">
+                        <h3 class="font-serif text-2xl font-bold text-slate-100 group-hover:text-gold-300 transition-colors">
+                            Keratin & Saç Botoksu Terapisi
+                        </h3>
 
-                                    Google Haritalarda Aç
+                        <p class="text-slate-400 text-xs leading-relaxed">
+                            Yıpranmış saç tellerini onaran, elektriklenmeyi önleyen ve ipeksi pürüzsüzlük sağlayan profesyonel bakım seansları.
+                        </p>
 
-                                    <i data-lucide="external-link"
-                                       class="w-3 h-3">
-                                    </i>
+                        <ul class="space-y-2 pt-2 border-t border-white/5 text-xs text-slate-300">
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-gold-400"></i> Brezilya fönü & kalıcı düzleştirme</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-gold-400"></i> Yoğun nem ve keratin yüklemesi</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-gold-400"></i> Saç botoksu ile canlandırma</li>
+                        </ul>
+                    </div>
 
+                    <div class="pt-6 mt-6 border-t border-white/10">
+                        <a href="https://wa.me/905416413558?text=Merhaba,%20Keratin%20ve%20Sa%C3%A7%20Bak%C4%B1m%C4%B1%20i%C3%A7in%20randevu%20almak%20istiyorum." 
+                           target="_blank" 
+                           class="w-full py-2.5 rounded-xl border border-gold-500/30 text-gold-300 text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2 group-hover:bg-gold-gradient group-hover:text-charcoal-950 group-hover:border-transparent transition-all">
+                            Bakım Randevusu Al
+                            <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERİ / ÇALIŞMALARIMIZ (GALLERY & AMBIANCE) SECTION -->
+    <section id="galeri" class="py-24 bg-charcoal-900/80 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <div>
+                    <div class="inline-flex items-center gap-2 text-gold-400 text-xs font-bold tracking-[0.25em] uppercase">
+                        <span class="w-6 h-[1px] bg-gold-400"></span>
+                        İlham Veren Sonuçlar
+                    </div>
+                    <h2 class="font-serif text-3xl sm:text-5xl font-bold text-slate-100 mt-2">
+                        Stüdyomuzdan Kareler & Tasarımlar
+                    </h2>
+                </div>
+                <a href="https://www.instagram.com/hairstudio_ahmetcetin?igsi=ejZlZzFxdGo5cnRt" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 hover:bg-gold-500/20 border border-white/10 hover:border-gold-400/40 text-xs font-bold tracking-widest text-gold-300 uppercase transition-all">
+                    <i data-lucide="instagram" class="w-4 h-4 text-gold-400"></i>
+                    @hairstudio_ahmetcetin Takip Et
+                </a>
+            </div>
+
+            <!-- Responsive Image Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                
+                <!-- Work 1 -->
+                <div class="group relative h-72 sm:h-80 rounded-2xl overflow-hidden gold-border-glow bg-charcoal-950">
+                    <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=600&q=80" alt="Platin Sarı & Balyaj Tasarımı" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-charcoal-950 via-charcoal-950/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
+                        <span class="text-[11px] font-bold tracking-widest text-gold-400 uppercase">Ombre & Balyaj</span>
+                        <h4 class="font-serif text-lg font-bold text-white">İpeksi Sarı Geçişler</h4>
+                    </div>
+                </div>
+
+                <!-- Work 2 -->
+                <div class="group relative h-72 sm:h-80 rounded-2xl overflow-hidden gold-border-glow bg-charcoal-950">
+                    <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=600&q=80" alt="Salon İç Mekan ve Kuaför Koltuğu" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-charcoal-950 via-charcoal-950/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
+                        <span class="text-[11px] font-bold tracking-widest text-gold-400 uppercase">Stüdyo Atmosferi</span>
+                        <h4 class="font-serif text-lg font-bold text-white">Konforlu & Modern Ortam</h4>
+                    </div>
+                </div>
+
+                <!-- Work 3 -->
+                <div class="group relative h-72 sm:h-80 rounded-2xl overflow-hidden gold-border-glow bg-charcoal-950">
+                    <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=600&q=80" alt="Modern Dalgalı Saç Tasarımı" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-charcoal-950 via-charcoal-950/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
+                        <span class="text-[11px] font-bold tracking-widest text-gold-400 uppercase">Şekillendirme</span>
+                        <h4 class="font-serif text-lg font-bold text-white">Hacimli Dalgalar</h4>
+                    </div>
+                </div>
+
+                <!-- Work 4 -->
+                <div class="group relative h-72 sm:h-80 rounded-2xl overflow-hidden gold-border-glow bg-charcoal-950">
+                    <img src="https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=600&q=80" alt="Zarif Gelin Topuzu" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-charcoal-950 via-charcoal-950/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
+                        <span class="text-[11px] font-bold tracking-widest text-gold-400 uppercase">Gelin Tasarımı</span>
+                        <h4 class="font-serif text-lg font-bold text-white">Zarif & Kalıcı Topuz</h4>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- GOOGLE YORUMLARI (REVIEWS) SECTION -->
+    <section id="yorumlar" class="py-24 relative noise-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Google Trust Badge Bar -->
+            <div class="max-w-3xl mx-auto bg-charcoal-900 border border-gold-500/30 rounded-3xl p-6 sm:p-8 text-center mb-16 shadow-2xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-gold-500/10 rounded-full blur-2xl"></div>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                    <div class="flex items-center gap-2">
+                        <!-- Google G colored simulation -->
+                        <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-md">
+                            <span class="font-bold text-xl text-slate-900">G</span>
+                        </div>
+                        <div class="text-left">
+                            <div class="text-xs text-slate-400 uppercase font-bold tracking-wider">Google Değerlendirmesi</div>
+                            <div class="flex items-center gap-1.5 text-gold-400">
+                                <span class="text-xl font-bold text-white">5.0</span>
+                                <div class="flex">
+                                    <i data-lucide="star" class="w-4 h-4 fill-gold-400 text-gold-400"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-gold-400 text-gold-400"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-gold-400 text-gold-400"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-gold-400 text-gold-400"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-gold-400 text-gold-400"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden sm:block w-[1px] h-12 bg-white/10"></div>
+                    <div class="text-xs sm:text-sm text-slate-300 max-w-sm">
+                        İzmir Üçyol'da yüzlerce memnun danışanımızın onayladığı kusursuz hizmet kalitesi.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- Review 1 -->
+                <div class="p-6 sm:p-8 rounded-2xl bg-charcoal-900/80 gold-border-glow flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-1 text-gold-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
+                        </div>
+                        <p class="text-slate-300 text-sm leading-relaxed italic">
+                            "Ahmet Bey saçımın rengini tam istediğim gibi soğuk sarıya dönüştürdü, üstelik tek bir yıpranma bile olmadan! İzmir'de saçınızı gözünüz kapalı emanet edebileceğiniz tek stüdyo."
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-white/5 flex items-center justify-between">
+                        <div>
+                            <h4 class="font-bold text-slate-100 text-sm">Selin Y.</h4>
+                            <span class="text-[11px] text-slate-400">Google Doğrulanmış Müşteri</span>
+                        </div>
+                        <i data-lucide="badge-check" class="w-5 h-5 text-gold-400"></i>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="p-6 sm:p-8 rounded-2xl bg-charcoal-900/80 gold-border-glow flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-1 text-gold-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
+                        </div>
+                        <p class="text-slate-300 text-sm leading-relaxed italic">
+                            "Düğünüm için gelin saçımı burada yaptırdım. Gece boyu bir tel bile bozulmadı, tüm misafirlerim saç modelime bayıldı. İlgi, alaka ve nezaketleri için Ahmet Çetin ve ekibine sonsuz teşekkürler."
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-white/5 flex items-center justify-between">
+                        <div>
+                            <h4 class="font-bold text-slate-100 text-sm">Buse K.</h4>
+                            <span class="text-[11px] text-slate-400">Google Doğrulanmış Müşteri</span>
+                        </div>
+                        <i data-lucide="badge-check" class="w-5 h-5 text-gold-400"></i>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="p-6 sm:p-8 rounded-2xl bg-charcoal-900/80 gold-border-glow flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-1 text-gold-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
+                        </div>
+                        <p class="text-slate-300 text-sm leading-relaxed italic">
+                            "Üçyol'da böyle kaliteli, modern ve hijyenik bir saç stüdyosu olması büyük şans. Kesim konusunda Ahmet Bey tam bir usta, yüzüme en yakışan modeli buldu."
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-white/5 flex items-center justify-between">
+                        <div>
+                            <h4 class="font-bold text-slate-100 text-sm">Merve T.</h4>
+                            <span class="text-[11px] text-slate-400">Google Doğrulanmış Müşteri</span>
+                        </div>
+                        <i data-lucide="badge-check" class="w-5 h-5 text-gold-400"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- İLETİŞİM & KONUM (CONTACT & LOCATION) SECTION -->
+    <section id="iletisim" class="py-24 bg-charcoal-900 border-t border-white/5 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                
+                <!-- Contact Info Column -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div>
+                        <div class="inline-flex items-center gap-2 text-gold-400 text-xs font-bold tracking-[0.25em] uppercase">
+                            <span class="w-6 h-[1px] bg-gold-400"></span>
+                            Bize Ulaşın
+                        </div>
+                        <h2 class="font-serif text-3xl sm:text-5xl font-bold text-slate-100 mt-2">
+                            Randevu & İletişim
+                        </h2>
+                        <p class="text-slate-400 text-sm mt-3">
+                            Size en uygun gün ve saatte yerinizi ayırtmak veya saçınız için ön danışmanlık almak adına bizimle iletişime geçin.
+                        </p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <!-- Address -->
+                        <div class="p-5 rounded-2xl bg-charcoal-850 gold-border-glow flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </div>
+                            <div class="space-y-1">
+                                <h4 class="text-sm font-bold text-slate-100">Salon Konumu</h4>
+                                <p class="text-xs text-slate-400">İzmir Üçyol Mevkii (Merkezi & Rahat Ulaşım)</p>
+                                <a href="https://maps.app.goo.gl/bWMnAVXDZvRxckW2A?g_st=ic" target="_blank" class="inline-flex items-center gap-1.5 text-xs text-gold-400 hover:text-gold-300 font-semibold pt-1">
+                                    <span>Google Haritalarda Aç</span>
+                                    <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
                                 </a>
-
                             </div>
-
                         </div>
 
-                    </div>
-
-
-                    <!-- PHONE -->
-
-                    <div class="p-5 rounded-2xl bg-charcoal-850 gold-border">
-
-                        <div class="flex gap-4">
-
-                            <div class="w-11 h-11 rounded-xl bg-gold-500/10 flex items-center justify-center text-gold-400">
-
-                                <i data-lucide="phone"></i>
-
+                        <!-- Phone -->
+                        <div class="p-5 rounded-2xl bg-charcoal-850 gold-border-glow flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i data-lucide="phone-call" class="w-5 h-5"></i>
                             </div>
+                            <div class="space-y-1">
+                                <h4 class="text-sm font-bold text-slate-100">Telefon / WhatsApp</h4>
+                                <p class="text-xs text-slate-400">Hızlı arama ve randevu hattı</p>
+                                <div class="flex items-center gap-4 pt-1">
+                                    <a href="tel:05416413558" class="text-sm font-bold text-gold-400 hover:underline">
+                                        0541 641 35 58
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
 
-
-                            <div>
-
-                                <h4 class="font-bold">
-                                    Telefon / WhatsApp
-                                </h4>
-
-                                <a
-                                    href="tel:05416413558"
-                                    class="text-gold-400 text-sm font-bold mt-1 block">
-
-                                    0541 641 35 58
-
+                        <!-- Instagram -->
+                        <div class="p-5 rounded-2xl bg-charcoal-850 gold-border-glow flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i data-lucide="instagram" class="w-5 h-5"></i>
+                            </div>
+                            <div class="space-y-1">
+                                <h4 class="text-sm font-bold text-slate-100">Instagram Profilimiz</h4>
+                                <p class="text-xs text-slate-400">Güncel saç modelleri ve hikayeler</p>
+                                <a href="https://www.instagram.com/hairstudio_ahmetcetin?igsi=ejZlZzFxdGo5cnRt" target="_blank" class="inline-flex items-center gap-1.5 text-xs text-gold-400 hover:text-gold-300 font-semibold pt-1">
+                                    <span>@hairstudio_ahmetcetin</span>
+                                    <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
                                 </a>
-
                             </div>
-
                         </div>
 
-                    </div>
-
-
-                    <!-- INSTAGRAM -->
-
-                    <div class="p-5 rounded-2xl bg-charcoal-850 gold-border">
-
-                        <div class="flex gap-4">
-
-                            <div class="w-11 h-11 rounded-xl bg-gold-500/10 flex items-center justify-center text-gold-400">
-
-                                <i data-lucide="instagram"></i>
-
+                        <!-- Working Hours -->
+                        <div class="p-5 rounded-2xl bg-charcoal-850/60 border border-white/5 flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-white/5 text-slate-300 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i data-lucide="clock" class="w-5 h-5 text-gold-400"></i>
                             </div>
-
-
                             <div>
-
-                                <h4 class="font-bold">
-                                    Instagram
-                                </h4>
-
-                                <a
-                                    href="https://www.instagram.com/hairstudio_ahmetcetin?igsi=ejZlZzFxdGo5cnRt"
-                                    target="_blank"
-                                    class="text-gold-400 text-sm font-bold mt-1 block">
-
-                                    @hairstudio_ahmetcetin
-
-                                </a>
-
+                                <h4 class="text-sm font-bold text-slate-100">Çalışma Saatleri</h4>
+                                <p class="text-xs text-slate-400 mt-0.5">Pazartesi - Cumartesi: 09:00 - 19:30</p>
+                                <p class="text-xs text-gold-400/80 font-medium mt-0.5">Pazar günleri randevu durumuna göre hizmet verilmektedir.</p>
                             </div>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- Interactive Booking Card Form (Directly connects to WhatsApp) -->
+                <div class="lg:col-span-7 bg-charcoal-950 p-8 sm:p-10 rounded-3xl gold-border-glow relative">
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-slate-100">
+                                Hızlı Randevu Talebi
+                            </h3>
+                            <p class="text-slate-400 text-xs sm:text-sm mt-1">
+                                Formu doldurduğunuzda bilgileriniz doğrudan WhatsApp üzerinden Ahmet Çetin Hair Studio'ya iletilir.
+                            </p>
                         </div>
 
-                    </div>
-
-
-                    <!-- HOURS -->
-
-                    <div class="p-5 rounded-2xl bg-charcoal-850 gold-border">
-
-                        <div class="flex gap-4">
-
-                            <div class="w-11 h-11 rounded-xl bg-gold-500/10 flex items-center justify-center text-gold-400">
-
-                                <i data-lucide="clock"></i>
-
+                        <form id="appointmentForm" class="space-y-4" onsubmit="handleAppointment(event)">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="space-y-1.5">
+                                    <label class="text-xs font-semibold text-slate-300 uppercase tracking-wider">Adınız Soyadınız</label>
+                                    <input type="text" id="clientName" required placeholder="Örn: Ayşe Yılmaz" class="w-full px-4 py-3 rounded-xl bg-charcoal-850 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-gold-400 text-sm">
+                                </div>
+                                <div class="space-y-1.5">
+                                    <label class="text-xs font-semibold text-slate-300 uppercase tracking-wider">Telefon Numaranız</label>
+                                    <input type="tel" id="clientPhone" placeholder="05XX XXX XX XX" class="w-full px-4 py-3 rounded-xl bg-charcoal-850 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-gold-400 text-sm">
+                                </div>
                             </div>
 
-
-                            <div>
-
-                                <h4 class="font-bold">
-                                    Çalışma Saatleri
-                                </h4>
-
-                                <p class="text-xs text-slate-400 mt-1">
-                                    Pazartesi - Cumartesi
-                                </p>
-
-                                <p class="text-sm text-gold-300 font-semibold">
-                                    09:00 - 19:30
-                                </p>
-
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="space-y-1.5">
+                                    <label class="text-xs font-semibold text-slate-300 uppercase tracking-wider">İstenen Hizmet</label>
+                                    <select id="serviceSelect" class="w-full px-4 py-3 rounded-xl bg-charcoal-850 border border-white/10 text-white focus:outline-none focus:border-gold-400 text-sm">
+                                        <option value="Ombre / Balyaj / Renklendirme">Ombre / Balyaj / Renklendirme</option>
+                                        <option value="Modern Saç Kesimi & Fön">Modern Saç Kesimi & Fön</option>
+                                        <option value="Gelin Başı & Nişan Saçı">Gelin Başı & Nişan Saçı</option>
+                                        <option value="Keratin Bakımı & Botoks">Keratin Bakımı & Saç Botoksu</option>
+                                        <option value="Özel Saç Tasarımı & Danışmanlık">Özel Saç Tasarımı & Danışmanlık</option>
+                                    </select>
+                                </div>
+                                <div class="space-y-1.5">
+                                    <label class="text-xs font-semibold text-slate-300 uppercase tracking-wider">Tercih Edilen Gün/Saat</label>
+                                    <input type="text" id="preferredTime" placeholder="Örn: Cumartesi 14:00 civarı" class="w-full px-4 py-3 rounded-xl bg-charcoal-850 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-gold-400 text-sm">
+                                </div>
                             </div>
 
+                            <div class="space-y-1.5">
+                                <label class="text-xs font-semibold text-slate-300 uppercase tracking-wider">Ek Not veya Saçınız Hakkında Bilgi</label>
+                                <textarea id="clientNotes" rows="3" placeholder="Mevcut saç renginiz, istediğiniz özel ton veya sorularınız..." class="w-full px-4 py-3 rounded-xl bg-charcoal-850 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-gold-400 text-sm"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-4 rounded-xl bg-gold-gradient text-charcoal-950 font-bold text-sm uppercase tracking-wider hover:brightness-110 transition-all flex items-center justify-center gap-3 shadow-lg shadow-gold-500/20">
+                                <i data-lucide="send" class="w-4 h-4"></i>
+                                WhatsApp ile Randevu Talebini Gönder
+                            </button>
+                        </form>
+
+                        <div class="flex items-center justify-center gap-2 text-center text-xs text-slate-400 pt-2">
+                            <i data-lucide="shield-check" class="w-4 h-4 text-gold-400"></i>
+                            Bilgileriniz doğrudan stüdyo yetkilisi ile paylaşılır.
                         </div>
-
                     </div>
+                </div>
 
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-charcoal-950 border-t border-white/10 pt-16 pb-12 text-slate-400 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-8 pb-12 border-b border-white/5">
+                
+                <!-- Brand Info -->
+                <div class="text-center md:text-left space-y-2">
+                    <span class="font-serif text-2xl font-bold tracking-[0.2em] text-gold-gradient uppercase">
+                        AHMET ÇETİN
+                    </span>
+                    <p class="text-xs text-slate-400 max-w-sm">
+                        İzmir Üçyol'da lüks saç tasarımı, renklendirme ve profesyonel kuaförlük hizmetleri.
+                    </p>
+                </div>
+
+                <!-- Footer Quick Links -->
+                <div class="flex flex-wrap items-center justify-center gap-6 text-xs uppercase tracking-wider font-semibold text-slate-300">
+                    <a href="#hakkimizda" class="hover:text-gold-400 transition-colors">Hakkımızda</a>
+                    <a href="#hizmetler" class="hover:text-gold-400 transition-colors">Hizmetler</a>
+                    <a href="#galeri" class="hover:text-gold-400 transition-colors">Galeri</a>
+                    <a href="#yorumlar" class="hover:text-gold-400 transition-colors">Yorumlar</a>
+                    <a href="#iletisim" class="hover:text-gold-400 transition-colors">Konum</a>
+                    <a href="https://maps.app.goo.gl/bWMnAVXDZvRxckW2A?g_st=ic" target="_blank" class="text-gold-400 hover:underline">Harita</a>
+                </div>
+
+                <!-- Social Icons -->
+                <div class="flex items-center gap-3">
+                    <a href="https://www.instagram.com/hairstudio_ahmetcetin?igsi=ejZlZzFxdGo5cnRt" target="_blank" class="w-10 h-10 rounded-full bg-charcoal-850 border border-white/10 flex items-center justify-center text-slate-300 hover:text-gold-400 hover:border-gold-500/40 transition-all" aria-label="Instagram">
+                        <i data-lucide="instagram" class="w-4 h-4"></i>
+                    </a>
+                    <a href="https://wa.me/905416413558" target="_blank" class="w-10 h-10 rounded-full bg-charcoal-850 border border-white/10 flex items-center justify-center text-slate-300 hover:text-gold-400 hover:border-gold-500/40 transition-all" aria-label="WhatsApp">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    </a>
+                    <a href="tel:05416413558" class="w-10 h-10 rounded-full bg-charcoal-850 border border-white/10 flex items-center justify-center text-slate-300 hover:text-gold-400 hover:border-gold-500/40 transition-all" aria-label="Telefon">
+                        <i data-lucide="phone" class="w-4 h-4"></i>
+                    </a>
                 </div>
 
             </div>
 
-
-
-            <!-- WHATSAPP FORM -->
-
-            <div
-                class="p-7 sm:p-10 rounded-3xl bg-charcoal-950 gold-border">
-
-                <h3 class="font-serif text-3xl font-bold">
-                    Hızlı Randevu
-                </h3>
-
-                <p class="text-xs text-slate-400 mt-2">
-                    Formu doldurun, bilgiler WhatsApp üzerinden iletilsin.
-                </p>
-
-
-                <form
-                    id="appointmentForm"
-                    class="space-y-4 mt-7">
-
-
-                    <input
-                        id="clientName"
-                        required
-                        type="text"
-                        placeholder="Adınız Soyadınız"
-                        class="w-full px-4 py-4 rounded-xl bg-charcoal-850 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-gold-400">
-
-
-                    <input
-                        id="clientPhone"
-                        type="tel"
-                        placeholder="Telefon Numaranız"
-                        class="w-full px-4 py-4 rounded-xl bg-charcoal-850 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-gold-400">
-
-
-                    <select
-                        id="serviceSelect"
-                        class="w-full px-4 py-4 rounded-xl bg-charcoal-850 border border-white/10 text-white focus:outline-none focus:border-gold-400">
-
-                        <option>
-                            Saç Kesimi
-                        </option>
-
-                        <option>
-                            Ombre / Balyaj / Renklendirme
-                        </option>
-
-                        <option>
-                            Gelin & Nişan Saçı
-                        </option>
-
-                        <option>
-                            Keratin / Saç Botoksu
-                        </option>
-
-                        <option>
-                            Diğer
-                        </option>
-
-                    </select>
-
-
-                    <input
-                        id="preferredTime"
-                        type="text"
-                        placeholder="Tercih ettiğiniz gün / saat"
-                        class="w-full px-4 py-4 rounded-xl bg-charcoal-850 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-gold-400">
-
-
-                    <textarea
-                        id="clientNotes"
-                        rows="4"
-                        placeholder="Eklemek istediğiniz not..."
-                        class="w-full px-4 py-4 rounded-xl bg-charcoal-850 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-gold-400"></textarea>
-
-
-                    <button
-                        type="submit"
-                        class="w-full py-4 rounded-xl bg-gold-gradient text-charcoal-950 font-bold uppercase tracking-wider text-sm flex items-center justify-center gap-3">
-
-                        <i data-lucide="message-circle"
-                           class="w-5 h-5">
-                        </i>
-
-                        WhatsApp'a Gönder
-
-                    </button>
-
-                </form>
-
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
+                <p>© <span id="currentYear"></span> Ahmet Çetin Hair Studio. Tüm Hakları Saklıdır.</p>
+                <p class="text-slate-400">İzmir / Üçyol • Lüks Saç Tasarım & Bakım Deneyimi</p>
             </div>
-
         </div>
+    </footer>
 
+    <!-- FLOATING WHATSAPP BUTTON (MOBILE & DESKTOP) -->
+    <div class="fixed bottom-6 right-6 z-50 flex items-center gap-3 group">
+        <a href="https://wa.me/905416413558?text=Merhaba,%20Ahmet%20%C3%87etin%20Hair%20Studio%20i%C3%A7in%20bilgi%20ve%20randevu%20almak%20istiyorum." 
+           target="_blank" 
+           aria-label="WhatsApp Hızlı Randevu Hattı"
+           class="relative flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#25D366] text-white shadow-2xl hover:scale-110 transition-transform duration-300 focus:outline-none">
+            <!-- Pulsing Ring -->
+            <span class="absolute -inset-1 rounded-full bg-[#25D366] opacity-40 animate-ping pointer-events-none"></span>
+            <i data-lucide="message-circle" class="w-7 h-7 sm:w-8 sm:h-8"></i>
+        </a>
     </div>
 
-</section>
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
 
+        // Dynamic Copyright Year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
 
+        // Mobile Menu Toggle
+        const mobileToggle = document.getElementById('mobile-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
 
-<!-- ========================================================= -->
-<!-- FOOTER -->
-<!-- ========================================================= -->
-
-<footer class="bg-charcoal-950 border-t border-white/10 py-12">
-
-    <div
-        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-        <div
-            class="flex flex-col md:flex-row items-center justify-between gap-6">
-
-
-            <div class="text-center md:text-left">
-
-                <div class="font-serif text-2xl font-bold gold-text tracking-[.2em]">
-                    AHMET ÇETİN
-                </div>
-
-                <p class="text-xs text-slate-500 mt-2">
-                    Hair Studio • İzmir Üçyol
-                </p>
-
-            </div>
-
-
-            <div class="flex gap-3">
-
-                <a
-                    href="https://www.instagram.com/hairstudio_ahmetcetin?igsi=ejZlZzFxdGo5cnRt"
-                    target="_blank"
-                    class="w-10 h-10 rounded-full bg-charcoal-850 border border-white/10 flex items-center justify-center hover:text-gold-400">
-
-                    <i data-lucide="instagram"
-                       class="w-4 h-4">
-                    </i>
-
-                </a>
-
-
-                <a
-                    href="https://wa.me/905416413558"
-                    target="_blank"
-                    class="w-10 h-10 rounded-full bg-charcoal-850 border border-white/10 flex items-center justify-center hover:text-gold-400">
-
-                    <i data-lucide="message-circle"
-                       class="w-4 h-4">
-                    </i>
-
-                </a>
-
-
-                <a
-                    href="tel:05416413558"
-                    class="w-10 h-10 rounded-full bg-charcoal-850 border border-white/10 flex items-center justify-center hover:text-gold-400">
-
-                    <i data-lucide="phone"
-                       class="w-4 h-4">
-                    </i>
-
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <div
-            class="border-t border-white/5 mt-8 pt-6 text-center text-xs text-slate-600">
-
-            © <span id="year"></span>
-            Ahmet Çetin Hair Studio.
-            Tüm hakları saklıdır.
-
-        </div>
-
-    </div>
-
-</footer>
-
-
-
-<!-- ========================================================= -->
-<!-- FLOATING WHATSAPP -->
-<!-- ========================================================= -->
-
-<a
-    href="https://wa.me/905416413558?text=Merhaba,%20Ahmet%20%C3%87etin%20Hair%20Studio%20i%C3%A7in%20randevu%20almak%20istiyorum."
-    target="_blank"
-    aria-label="WhatsApp"
-    class="fixed bottom-5 right-5 z-50 w-16 h-16 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-2xl hover:scale-110 transition">
-
-    <i data-lucide="message-circle"
-       class="w-8 h-8">
-    </i>
-
-</a>
-
-
-
-<!-- ========================================================= -->
-<!-- JAVASCRIPT -->
-<!-- ========================================================= -->
-
-<script>
-
-    lucide.createIcons();
-
-
-    /* YEAR */
-
-    document.getElementById("year").textContent =
-        new Date().getFullYear();
-
-
-    /* MOBILE MENU */
-
-    const mobileToggle =
-        document.getElementById("mobile-toggle");
-
-    const mobileMenu =
-        document.getElementById("mobile-menu");
-
-    const mobileLinks =
-        document.querySelectorAll(".mobile-link");
-
-
-    mobileToggle.addEventListener("click", () => {
-
-        mobileMenu.classList.toggle("hidden");
-
-    });
-
-
-    mobileLinks.forEach(link => {
-
-        link.addEventListener("click", () => {
-
-            mobileMenu.classList.add("hidden");
-
+        mobileToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
         });
 
-    });
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
 
-
-    /* WHATSAPP FORM */
-
-    document
-        .getElementById("appointmentForm")
-        .addEventListener("submit", function(event) {
-
+        // Appointment Form Handler with WhatsApp Integration
+        function handleAppointment(event) {
             event.preventDefault();
 
+            const name = document.getElementById('clientName').value.trim();
+            const phone = document.getElementById('clientPhone').value.trim();
+            const service = document.getElementById('serviceSelect').value;
+            const time = document.getElementById('preferredTime').value.trim();
+            const notes = document.getElementById('clientNotes').value.trim();
 
-            const name =
-                document.getElementById("clientName").value.trim();
+            let message = `*Yeni Randevu Talebi (Ahmet Çetin Hair Studio)*\n\n`;
+            message += `👤 *İsim:* ${name}\n`;
+            if(phone) message += `📞 *Telefon:* ${phone}\n`;
+            message += `💇‍♀️ *Hizmet:* ${service}\n`;
+            if(time) message += `📅 *Tercih Edilen Zaman:* ${time}\n`;
+            if(notes) message += `📝 *Not:* ${notes}\n`;
 
-            const phone =
-                document.getElementById("clientPhone").value.trim();
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/905416413558?text=${encodedMessage}`;
 
-            const service =
-                document.getElementById("serviceSelect").value;
-
-            const time =
-                document.getElementById("preferredTime").value.trim();
-
-            const notes =
-                document.getElementById("clientNotes").value.trim();
-
-
-            let message =
-                "Merhaba, Ahmet Çetin Hair Studio için randevu talebi oluşturmak istiyorum.%0A%0A";
-
-
-            message +=
-                "Ad Soyad: " +
-                encodeURIComponent(name) +
-                "%0A";
-
-
-            if (phone) {
-
-                message +=
-                    "Telefon: " +
-                    encodeURIComponent(phone) +
-                    "%0A";
-
-            }
-
-
-            message +=
-                "Hizmet: " +
-                encodeURIComponent(service) +
-                "%0A";
-
-
-            if (time) {
-
-                message +=
-                    "Tercih edilen zaman: " +
-                    encodeURIComponent(time) +
-                    "%0A";
-
-            }
-
-
-            if (notes) {
-
-                message +=
-                    "Not: " +
-                    encodeURIComponent(notes) +
-                    "%0A";
-
-            }
-
-
-            window.open(
-                "https://wa.me/905416413558?text=" + message,
-                "_blank"
-            );
-
-        });
-
-
-    /* HEADER */
-
-    window.addEventListener("scroll", () => {
-
-        const header =
-            document.getElementById("main-header");
-
-
-        if (window.scrollY > 30) {
-
-            header.classList.add(
-                "shadow-2xl",
-                "bg-charcoal-950/95"
-            );
-
-        } else {
-
-            header.classList.remove(
-                "shadow-2xl",
-                "bg-charcoal-950/95"
-            );
-
+            window.open(whatsappUrl, '_blank');
         }
 
-    });
-
-</script>
-
+        // Header shadow on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('main-header');
+            if (window.scrollY > 30) {
+                header.classList.add('shadow-xl', 'bg-charcoal-950/95');
+                header.classList.remove('bg-charcoal-900/75');
+            } else {
+                header.classList.remove('shadow-xl', 'bg-charcoal-950/95');
+                header.classList.add('bg-charcoal-900/75');
+            }
+        });
+    </script>
 </body>
 </html>
